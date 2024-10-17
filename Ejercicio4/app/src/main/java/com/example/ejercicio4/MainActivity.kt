@@ -1,4 +1,4 @@
-package com.example.ejercicio3
+package com.example.ejercicio4
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -8,19 +8,22 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import com.example.ejercicio3.ui.components.MyLoginScreen
-import com.example.ejercicio3.ui.theme.Ejercicio3Theme
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.ejercicio4.ui.components.myScreen
+import com.example.ejercicio4.ui.theme.Ejercicio4Theme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            Ejercicio3Theme {
+            Ejercicio4Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     Column(modifier = Modifier.padding(innerPadding)) {
-                        MyLoginScreen()
+                        myScreen()
                     }
                 }
             }
